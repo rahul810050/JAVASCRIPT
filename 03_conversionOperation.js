@@ -36,9 +36,21 @@
 // "rahul" => true
 
 
-let number = 20
+// let number = 20
 
-let stringNumber = String(number)
+// let stringNumber = String(number)
 
-console.log(typeof(stringNumber));
-console.log((stringNumber));
+// console.log(typeof(stringNumber));
+// console.log((stringNumber));
+
+
+// *******************************OPERATIONS*****************************
+
+
+console.log("1" + 2); // 12
+console.log(1 + "2"); // 12
+console.log("1" + 2 + 2);// 122
+console.log(1 + 2 + "2"); // 32
+
+console.log(+true); // 1
+console.log(+""); // 0
