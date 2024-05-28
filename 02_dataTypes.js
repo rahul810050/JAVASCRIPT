@@ -34,3 +34,18 @@
 // Primitive -> 7 types-> String, Number, Boolean, null, undefined, Symbol, BigInt
 
 // Reference (Non Primitive) -> Array, Object, Functions
+
+const heros = ["shaktiman","doga"]
+
+let obj = {
+	name: "Rahul",
+	age: 20,
+}
+
+const myFunction = function(){
+	console.log("Hello world");
+}
+
+console.log(typeof(heros));
+console.log(typeof(obj));
+console.log(typeof(myFunction));
