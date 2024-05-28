@@ -1,7 +1,7 @@
 console.log("Hello world");
 console.log("just solved all the command misunderstanding");
 console.log("JAVASCRIPT");
-let age = 20;
+let age = 10;
 if(age<18 && age>=12){
 	console.log("you are a teenager..You cannot vote!!")
 }
