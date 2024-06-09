@@ -6,7 +6,9 @@ tinderUser.name = "Rahul"
 tinderUser.age = 20
 
 // console.log(Object.keys(tinderUser)); // Returns the names of the enumerable string properties and methods of an object.
+
 // console.log(Object.values(tinderUser)); // Returns an array of values of the enumerable properties of an object
+
 // console.log(Object.entries(tinderUser)); // Returns an array of key/values of the enumerable properties of an object
 
 // console.log(tinderUser);
