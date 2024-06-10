@@ -32,4 +32,37 @@ function loginUserMessage(username = "Cocane"){
 
 // console.log(loginUserMessage()); // if we dont pass the argument in the function then it will be treated as undefined
 
-console.log(loginUserMessage("Rahul"));  // the cocane username will simply be overwritten 
+// console.log(loginUserMessage("Rahul"));  // the cocane username will simply be overwritten 
+
+
+function calculateCartPrice(...num1){  // "..." this is rest operator it gives an array of all the arguments passed in the call of function no matter how many value we pass in the argument
+	return num1
+}
+
+// console.log(calculateCartPrice(200,300,400,500,600))
+
+// when we pass an object in a function
+
+// const user = {
+// 	username: "Rahul",
+// 	price: 999
+// }
+
+// function handleObject(anyObject){
+// 	console.log(`Username is: ${anyObject.username} and Price is: ${anyObject.price}`);
+// }
+// // handleObject(user)
+// handleObject({
+// 	username: "Rahul",
+// 	price: 999
+// }) // we can also pass direct object
+
+// when we pass an array in a function
+
+// const myNewArray = [100,200,300,400,500]
+
+// function handleArray(getArray){
+// 	return getArray[3]
+// }
+// console.log(handleArray(myNewArray))
+// console.log(handleArray([100,200,300,400,500])); // we can also pass direct array
