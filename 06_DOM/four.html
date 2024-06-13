@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Create, Edit and Remove Element</title>
+</head>
+<body style="background-color: #212121;color: #fff;">
+	
+	<ul class="language">
+		<li>JAVASCRIPT</li>
+	</ul>
+</body>
+<script>
+	// 1 way to add element is this function---but when there are so many element already then it has to traverse all the element---so that is not a optimized code
+function addLanguage(lang){
+		const li = document.createElement("li")
+		li.innerHTML = `${lang}`
+		document.querySelector(".language").appendChild(li)
+	}
+	addLanguage("PYTHON")
+	addLanguage("TYPESCRIPT")
+
+	// 2nd way to add element
+
+	function addOptiLanguage(lang){
+		const li = document.createElement("li")
+		li.appendChild(document.createTextNode(lang))
+		document.querySelector(".language").lastChild.appendChild(li)
+	}
+	addOptiLanguage("GOLANG")
+	addOptiLanguage("RUBY")
+
+	// Edit techniques
+	const secondLanguage = document.querySelector("li:nth-child(2)")
+	secondLanguage.innerHTML = "MOJO"
+
+	const newLi = document.createElement("li")
+	newLi.textContent = "C++"
+	secondLanguage.replaceWith(newLi)
+
+	// edit
+	const firstLang = document.querySelector("li:first-child")
+	firstLang.outerHTML = "<li>JAVA</li>"
+
+	// remove
+	const lastLang = document.querySelector("li:last-child")
+	// lastLang.remove()
+
+</script>
+</html>
