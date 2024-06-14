@@ -15,7 +15,7 @@ const myArr = [1,2,3,4,5,6] // defining an array
 
 myArr.unshift(37)  // it just adds the value into the first position of array
 myArr.shift()  // it just removes the first element of the array
-myArr.includes(5) // it checks that is "5" is in the array or not if yes then True or False
+myArr.includes(5) // it checks that, "5" is in the array or not if yes then True else False
 //console.log(myArr.indexOf(4)); // it just returns thhe index of the value if it is in the array or give "-1"
 
 const newArr = myArr.join()  // convert the whole array into string
