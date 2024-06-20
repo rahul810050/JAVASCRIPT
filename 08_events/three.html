@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Events in JAVASCRIPT</title>
+</head>
+<body>
+	<h1 id="h1">Code with Rahul</h1>
+	<button id="start">start</button>
+	<button id="stop">stop</button>
+
+
+	<script>
+	// const sayMyName = function(){
+	// 	console.log('Rahul');
+	// 	console.log(Date.now());
+	// }
+	// setInterval(sayMyName, 2000)
+
+	const sayMyName = function(str){
+		// console.log(str);
+		console.log(`${str} Rahul`);
+	}
+	 let interval = setInterval(sayMyName, 2000, 'hello')
+
+	document.querySelector('#stop').addEventListener('click', function(e){
+		 const clear = clearInterval(interval) // to stop the execution of setInterval
+	})
+
+
+	document.querySelector('#start').addEventListener('click', function(e){
+		interval = setInterval(sayMyName, 2000, 'hello')
+	})
+	</script>
+</body>
+</html>
