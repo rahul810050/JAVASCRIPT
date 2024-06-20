@@ -14,13 +14,16 @@ function getRandomColor(){
 let interval;
 
 document.querySelector('#start').addEventListener('click',function(e){
+  if(!interval){ // better optimized code
   interval = setInterval(function(){
     const ranndom = getRandomColor()
     document.querySelector('body').style.backgroundColor = ranndom
   }, 2000)
+}
 })
 
 
 document.querySelector('#stop').addEventListener('click',function(e){
   clearInterval(interval)
+  interval = null // for better optimized code
 })
