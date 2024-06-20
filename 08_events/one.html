@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EVENTS IN JAVASCRIPT</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+	<h2>Amazing image</h2>
+	<div >
+			<ul id="images">
+					<li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+					<li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+					<li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&=cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+					<li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+					<li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+					<li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+			</ul>
+ </div>
+</body>
+
+<script>
+	// document.getElementById('owl').onclick = function(){  // it is better to not use onclick function because it does not come up with many functionality
+	// 	alert('it is an owl')
+	// }
+
+ // attachEvent()
+ // jQuery - on
+ // what do i need to study for event Listener
+ // type, timestamp, defaultPrevent
+ // target, toElement, srcelement
+ // clientX, clientY, shiftkey, keyCode // it is for interView perspective
+
+	// What is event propagation??
+	// it is two type of propagation event
+	// 1. Event Bubling -> which is used using defaultEvent --> false
+
+	// document.getElementById('images').addEventListener('click',function(e){
+	// console.log('clicked inside of ul')
+	// },false)
+	// document.getElementById('owl').addEventListener('click',function(e){
+	// console.log('owl clicked') // when we click owl image then firstly owl clicked will be printed then clicked inside of ul will be printed secondly
+	// },false) // this is called Event Bubling execution of program will start from bottom to up 
+
+	// 2. Event captuing - true
+	// document.getElementById('images').addEventListener('click',function(e){
+	// console.log('clicked inside of ul')
+	// },true)
+	// document.getElementById('owl').addEventListener('click',function(e){
+	// console.log('owl clicked') // when we click owl image then firstly clicked inside of ul will be printed then owl clicked will be printed secondly
+	// },true) // this is called Event Bubling execution of program will start from up to bottom
+
+
+	// document.getElementById('images').addEventListener('click',function(e){
+	// 	console.log('clicked inside the ul');
+	// }, false)
+	// document.getElementById('owl').addEventListener('click',function(e){
+	// 	console.log('owl clicked');
+	// 	e.stopPropagation() // it  will not bubble up to the images  event basically it will not execute upper event
+	// }, false)
+
+
+	// use of preventDefault--> if we click on any link it will not navigate to that link
+	// document.getElementById('google').addEventListener('click',function(e){
+	// 	e.preventDefault()
+	// 	e.stopPropagation()
+	// 	console.log('google clicked');
+	// }, false)
+
+	document.getElementById('images').addEventListener('click',function(e){
+		console.log(e.target)
+		//console.log(e.target.parentNode) // used to find the parent of the current node
+		console.log(e.target.tagName);
+		if(e.target.tagName === 'IMG'){
+			console.log(e.target.id);
+			const removeIt = e.target.parentNode
+			removeIt.remove()
+		}
+		
+		// removeIt.parentNode.removeChild(removeIt)
+	})
+
+</script>
+</html>
