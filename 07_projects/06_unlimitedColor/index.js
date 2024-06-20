@@ -7,8 +7,9 @@ function getRandomColor(){
     color += randomColor
   }
   return color
-
 }
+
+// console.log(getRandomColor);
 
 let interval;
 
