@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Events in JAVASCRIPT</title>
+</head>
+<body>
+	<h1 id="h1">Code with Rahul</h1>
+
+	<button id="stop">stop</button>
+
+
+	<script>
+		const changeText = function(){
+			const h1 = document.querySelector('#h1')
+			h1.innerHTML = 'Rahul'
+		}
+		 const change = setTimeout(changeText, 2000)
+
+		 // clearTimeout method
+		 document.querySelector('#stop').addEventListener('click',function(e){
+				clearTimeout(change) // it does not execute setTimeout method
+				console.log('stopped');
+		 })
+
+
+
+		const JSkiTarif = function(){
+			console.log('JS is hard but it is a good language');
+		}
+
+		setTimeout(JSkiTarif, 2000); //  fuunction defined outside of setTimeout method
+
+		// setTimeout(function(){ // unction declared inside of the setTimeout method
+		// 	console.log('Rahul'); 
+		// },  2000)
+	</script>
+</body>
+</html>
