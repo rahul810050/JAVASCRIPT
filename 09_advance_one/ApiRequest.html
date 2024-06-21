@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Api Request</title>
+</head>
+<body style="background-color: #212121;color: #fff;">
+Value  	State     				Description
+0	      UNSENT	   				Client has been created. open() not called yet.
+1	      OPENED	    			open() has been called.
+2	      HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3				LOADING						Downloading; responseText holds partial data.
+4				DONE							The operation is complete.
+
+<!-- assignment is to make a card having a photo and followers -->
+</body>
+<script>
+	const requestURL = 'https://api.github.com/users/rahul810050'
+	const xhr = new XMLHttpRequest(); // it actually changes its state continuously
+	xhr.open('GET',requestURL)
+	xhr.onreadystatechange =  function(){ // it continuously monitor all the things it only takes a function 
+		console.log(xhr.readyState); // and inside the function we can console its changing readystate
+		if(xhr.readyState === 4){
+			// const data = (this.responseText) // current context
+			const data = JSON.parse(this.responseText) // to make it object from string
+			console.log(data); // just want to print current context... what we get from here is a object as data
+			//console.log(typeof data); // string...basically we get data as a string most of the time not an object
+			console.log(typeof data); // object...after converting it from string to object
+			
+			//console.log(data.followers); // undefined
+			console.log(data.followers); // after converting it from string to object we get the access to get the values from data object         
+		}
+	}
+	xhr.send()
+</script>
+</html>
