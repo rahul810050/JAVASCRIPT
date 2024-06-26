@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Closure</title>
+</head>
+<body>
+	<button id="red">Red</button>
+	<button id="yellow">Yellow</button>
+</body>
+
+<script>
+	function makeFunc() {
+		const name = "Mozilla";
+		function displayName() {
+			console.log(name);
+		}
+		return displayName; // though the outer function gets finished but it returns the whole lexical scoping function that's why mozilla gets printed
+}
+
+	const myFunc = makeFunc();
+	myFunc();
+
+</script>
+
+<script>
+
+	function createColor(color){
+		return function(){
+			document.body.style.backgroundColor = `${color}`
+		}
+	}
+
+	document.getElementById('red').onclick = createColor('red')
+	document.getElementById('yellow').onclick = createColor('yellow')
+
+</script>
+
+
+</html>
