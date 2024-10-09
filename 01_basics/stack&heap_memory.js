@@ -5,8 +5,8 @@ let myName = "Rahul"
 let anotherName = myName
 
 anotherName = "Cocane"
-console.log(anotherName);
-console.log(myName);   // myName value does not change becoz stack memory is allocated to these type of primitive datatypes and it only passes the copy of the value
+// console.log(anotherName);
+// console.log(myName);   // myName value does not change becoz stack memory is allocated to these type of primitive datatypes and it only passes the copy of the value
 
 let userOne = {
 	email: "Rahul@gmail.com",

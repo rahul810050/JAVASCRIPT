@@ -1,16 +1,16 @@
 // const score = 400
 // console.log(score);
 
-// const balance = new Number(100)
+const balance = new Number(100.74756400)
 // console.log(balance);
 // console.log(balance.toString().length);
-// console.log(balance.toFixed(3));
+// console.log(balance.toFixed(3)); // round off from decimal 3
 
-// const num1 = 7283.894
-// console.log(num1.toPrecision(4));
+const num1 = 7283.894
+// console.log(num1.toPrecision(4)); // make the decimal value into round figure
 
-// const num2 = 1000000
-// console.log(num2.toLocaleString());
+const num2 = 1000000
+// console.log(num2.toLocaleString()); //
 
 // console.log(Number.MAX_VALUE);
 // console.log(Number.MIN_VALUE);
@@ -20,7 +20,7 @@
 
 //****************** Math ********************
 
-// const min = 10;
-// const max = 20;
+const min = 10;
+const max = 20;
 
-// console.log(Math.floor(Math.random()*(max - min + 1)) + min);
+console.log(Math.floor(Math.random()*(max - min + 1)) + min);

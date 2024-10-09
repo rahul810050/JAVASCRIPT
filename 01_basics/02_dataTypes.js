@@ -4,23 +4,23 @@
 
 // number => 2 to power 53
 // BigInt
-// striing => ""
+// string => ""
 // boolean => true/false
 // null => standalone value
 // undefined =>
 // symbol => unique
 
-// const id = Symbol('282')
-// const anotherId = Symbol('282')
+const id = Symbol('282')
+const anotherId = Symbol('282')
 
 // console.log(id === anotherId); // false
 
 
 // object
 
-// let age = 20
+let age = 20
 
-// let name = "Rahul"
+let name = "Rahul"
 
 
 // console.log(typeof age);
@@ -42,10 +42,13 @@ let obj = {
 	age: 20,
 }
 
+console.log(obj.name)
+console.log(heros[0]);
+
 const myFunction = function(){
 	console.log("Hello world");
 }
 
-console.log(typeof(heros));
-console.log(typeof(obj));
-console.log(typeof(myFunction));
+// console.log(typeof(heros));
+// console.log(typeof(obj));
+// console.log(typeof(myFunction));

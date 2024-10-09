@@ -1,7 +1,7 @@
 const name = "Rahul"
 const age = 20
 
-console.log(`hello my name is ${name} and I am ${age} year old`);
+// console.log(`hello my name is ${name} and I am ${age} year old`);
 
 
 // console.log(name.__proto__);
@@ -11,10 +11,10 @@ console.log(`hello my name is ${name} and I am ${age} year old`);
 const gameName = new String('eFootball')
 
 // console.log(gameName[0]);
-// console.log(gameName.__proto__);
+console.log(gameName.__proto__);
 // console.log(gameName.charAt(1));
 // console.log(gameName.indexOf('o'));
-// console.log(gameName.slice(0,3));
+console.log(gameName.slice(0,3));
 
 const newGame = "   Basketball    "
 
