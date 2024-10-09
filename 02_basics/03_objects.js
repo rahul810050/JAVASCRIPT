@@ -23,15 +23,15 @@ const JsUser = {
 // JsUser.name = "Cocane"
 // Object.freeze(JsUser) // Prevents the modification of existing property attributes and values, and prevents the addition of new properties
 
-// JsUser.name = "Naksar"
-// console.log(JsUser);
+JsUser.name = "Naksar"
+console.log(JsUser);
 
 JsUser.greeting = function(){
 	console.log("Hello Heaven");
 }
 JsUser.greetingTwo = function(){
-	console.log(`Hello Heaven ${this["full name"]}`);
+	console.log(`Hello Heaven ${JsUser["full name"]}`);
 }
 
-// console.log(JsUser.greeting());
+console.log(JsUser.greeting());
 console.log(JsUser.greetingTwo());

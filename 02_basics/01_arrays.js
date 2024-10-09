@@ -2,7 +2,7 @@
 
 const myArr = [1,2,3,4,5,6] // defining an array
 
-//const arr = new Array(1,2,3,4)// another way to define an array
+//const arr = new Array(1,2,3,4) // another way to define an array
 
 // console.log(myArr[3]);
 
@@ -20,15 +20,17 @@ myArr.includes(5) // it checks that, "5" is in the array or not if yes then True
 
 const newArr = myArr.join()  // convert the whole array into string
 
+// console.log(newArr)
+
 // console.log(myArr);
 // console.log(typeof newArr); // string
 
-console.log("A",myArr);
+// console.log("A",myArr);
 
 const newArr1 = myArr.slice(1,4); // it returns values from 1 index to 4-1 
-console.log(newArr1);
+// console.log(newArr1);
 
-console.log("B",myArr);
+// console.log("B",myArr);
 
 const newArr2 = myArr.splice(1,4); // it returns values from 1 index to 4 index and it not only return but also delete the element from the array
 console.log(newArr2);
