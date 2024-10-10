@@ -7,14 +7,14 @@ const b = [{},{},{}]
 const arr = [1,2,3,4,5]
 
 for (const i of arr) {
-	//console.log(i);
+	console.log(i);
 }
 
-// const str = "Rahul Naskar"
-// for (const i of str) {
-// 	if(i === " ") continue
-// 	else console.log(`each char: ${i}`);
-// }
+const str = "Rahul Naskar"
+for (const i of str) {
+	if(i === " ") continue
+	else console.log(`each char: ${i}`);
+}
 
 const map = new Map()
 map.set(1,"INDIA")
@@ -22,11 +22,11 @@ map.set(2,"RUSSIA")
 map.set(3,"USA")
 map.set(4,"UKRAIN")
 
-// console.log(map);
+console.log(map);
 
-// for (const [key,value] of map) {
-// 	console.log(key,":-",value);
-// }
+for (const [key,value] of map) {
+	console.log(key,":-",value);
+}
 
 // object
 

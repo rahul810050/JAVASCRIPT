@@ -1,21 +1,20 @@
 const myNums = [1,2,3,4,5,6,7,8]
 
 // const newNums = myNums.filter((num)=> num > 4) 
-// const newNums = myNums.filter((num)=> {
-// 	 return num > 4
-// 	}) // if we cover the condition with curly bracess then we have to write return statement
-// console.log(newNums);
+const newNums = myNums.filter((num)=> {
+	return num > 4
+	}) // if we cover the condition with curly bracess then we have to write return statement
+console.log(newNums);
 
 
 const newNum = [];
 
-myNums.forEach((num)=>{
-	if(num > 4){
-		newNum.push(num);
-	}
+myNums.forEach((x)=>{
+	if(x > 2) newNum.push(x);
 })
 
-// console.log(newNum);
+
+console.log(newNum);
 
 const books = [
 	{ title: 'Book One', genre: 'Fiction', publish: 1981, edition: 2004 },
@@ -29,8 +28,12 @@ const books = [
 	{ title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
 ];
 
-// const userBook = books.filter((bk)=> bk.genre === 'Fiction') // we have to put the condition
-const userBook = books.filter((bk) => {
-	return (bk.publish >= 1995) && (bk.genre === 'fiction');
-});
+const bookShop = books.filter((data)=> data.genre === 'Science');
+
+// console.log(bookShop);
+
+const userBook = books.filter((bk)=> bk.genre === 'Fiction') // we have to put the condition
+// const userBook = books.filter((bk) => {
+// 	return (bk.publish >= 1995) && (bk.genre === 'fiction');
+// });
 // console.log(userBook);

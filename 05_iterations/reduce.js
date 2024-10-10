@@ -5,7 +5,9 @@ const arr = [1,2,3,4,5,6,7,8,9,10]
 // }, 0) // here "0" initializes the accumulator
 
 const addition = arr.reduce((acc,currVal)=> acc + currVal, 0)// using arrow function
-// console.log(addition);
+console.log(addition);
+const multiplication = arr.reduce((acc, curr)=> acc * curr,1)
+console.log(multiplication)
 
 const shoppingCart = [
 	{
@@ -28,4 +30,4 @@ const shoppingCart = [
 
 const priceToPay = shoppingCart.reduce((acc,item)=> acc + Number(item.price), 0)
 
-console.log(priceToPay);
+// console.log(priceToPay);
