@@ -23,12 +23,12 @@ const obj = {}
 // Nullish Coalescing operator (??): null undefined
 // By using the nullish coalescing operator, you will only replace exactly null and undefined values with the right-hand value. The nullish coalescing operator can be used with any type of value, including numbers, strings, and objects
 let val1;
-// val1 = 5 ?? 10
+val1 = 5 ?? 10
 // val1 = null ?? 10
 // val1 = undefined ?? 10
-val1 = null ?? 10 ?? 20 // 10
+// val1 = null ?? 10 ?? 20 // 10
 
-// console.log(val1);
+console.log(val1);
 
 // Ternary Operator
 // condition ? true : false

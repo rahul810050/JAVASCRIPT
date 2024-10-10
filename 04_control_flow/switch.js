@@ -7,7 +7,7 @@
 // 		break;
 // }
 
-const day = 6
+const day = 63
 switch (day) {
 	case 1:
 		console.log("it's sunday");
