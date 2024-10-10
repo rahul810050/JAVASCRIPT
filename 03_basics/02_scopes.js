@@ -2,13 +2,13 @@
 
 // global scopes variables can be accessed in local scope 
 
-// let a = 100
-// if(true){
-// 	let a = 10
-// 	const b = 20
-// 	var c = 30
-// 	console.log("inner a is: ",a);
-// }
+let a = 100
+if(true){
+	let a = 10
+	const b = 20
+	var c = 30
+	console.log("inner a is: ",a);
+}
 
 // console.log(a);
 // console.log(b);
@@ -45,7 +45,7 @@ function addOne(num){ // this is function
 }
 console.log(addOne(5))
 
-console.log(addTwo(5)) //it will not be executed also gives error because it is called before its initialization
+// console.log(addTwo(5)) //it will not be executed also gives error because it is called before its initialization
 const addTwo = function(num){ // this is a function but also called expression
 	return num + 2
 }

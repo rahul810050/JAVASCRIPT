@@ -1,12 +1,12 @@
 // functions
 
-// function sayMyName(){
-// 	console.log("R");
-// 	console.log("A");
-// 	console.log("H");
-// 	console.log("U");
-// 	console.log("L");
-// }
+function sayMyName(){
+	console.log("R");
+	console.log("A");
+	console.log("H");
+	console.log("U");
+	console.log("L");
+}
 
 // sayMyName();
 
@@ -17,7 +17,7 @@ function addition(num1,num2){
 	console.log("Rahul"); // Unreachable code...after return no code will be eexecuted
 }
 
-// let result = addition(4,6)
+let result = addition(4,6)
 // console.log(result);
 
 function loginUserMessage(username = "Cocane"){
@@ -43,26 +43,28 @@ function calculateCartPrice(...num1){  // "..." this is rest operator it gives a
 
 // when we pass an object in a function
 
-// const user = {
-// 	username: "Rahul",
-// 	price: 999
-// }
+const user = {
+	username: "Rahul",
+	price: 999,
+	Batch: "Web Development",
+}
 
-// function handleObject(anyObject){
-// 	console.log(`Username is: ${anyObject.username} and Price is: ${anyObject.price}`);
-// }
-// // handleObject(user)
-// handleObject({
-// 	username: "Rahul",
-// 	price: 999
-// }) // we can also pass direct object
+function handleObject(anyObject){
+	console.log(`Username is: ${anyObject.username} and Price is: ${anyObject.price} and he enrolled in Batch ${anyObject.Batch}`);
+}
+handleObject(user)
+handleObject({
+	username: "Rahul",
+	price: 999,
+	Batch: "competitive programming",
+}) // we can also pass direct object
 
 // when we pass an array in a function
 
-// const myNewArray = [100,200,300,400,500]
+const myNewArray = [100,200,300,400,500]
 
-// function handleArray(getArray){
-// 	return getArray[3]
-// }
-// console.log(handleArray(myNewArray))
-// console.log(handleArray([100,200,300,400,500])); // we can also pass direct array
+function handleArray(getArray){
+	return getArray[3]
+}
+console.log(handleArray(myNewArray))
+console.log(handleArray([100,200,300,400,500])); // we can also pass direct array
