@@ -16,13 +16,13 @@
 			const h1 = document.querySelector('#h1')
 			h1.innerHTML = 'Rahul'
 		}
-		 const change = setTimeout(changeText, 2000)
+		const change = setTimeout(changeText, 2000)
 
 		 // clearTimeout method
-		 document.querySelector('#stop').addEventListener('click',function(e){
+		document.querySelector('#stop').addEventListener('click',function(e){
 				clearTimeout(change) // it does not execute setTimeout method
 				console.log('stopped');
-		 })
+		})
 
 
 
