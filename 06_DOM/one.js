@@ -12,6 +12,6 @@ a.textContent = 'DOM learning hello world'
 
 
 
-// console.log(document.links) 
+// console.log(document.links)
 // console.log(document.links[2])
 // document.getElementsById('firstHeading').innerHTML = "<h1>RAHUL</h1>"

@@ -28,7 +28,7 @@
  // jQuery - on
  // what do i need to study for event Listener
  // type, timestamp, defaultPrevent
- // target, toElement, srcelement
+ // target, toElement, srcElement, currentTarget
  // clientX, clientY, shiftkey, keyCode // it is for interView perspective
 
 	// What is event propagation??
@@ -40,15 +40,15 @@
 	// },false)
 	// document.getElementById('owl').addEventListener('click',function(e){
 	// console.log('owl clicked') // when we click owl image then firstly owl clicked will be printed then clicked inside of ul will be printed secondly
-	// },false) // this is called Event Bubling execution of program will start from bottom to up 
+	// },false) // this is called Event Bubling execution of program will start from bottom to up
 
-	// 2. Event captuing - true
-	// document.getElementById('images').addEventListener('click',function(e){
-	// console.log('clicked inside of ul')
-	// },true)
-	// document.getElementById('owl').addEventListener('click',function(e){
-	// console.log('owl clicked') // when we click owl image then firstly clicked inside of ul will be printed then owl clicked will be printed secondly
-	// },true) // this is called Event Bubling execution of program will start from up to bottom
+	// 2. Event capturing - true
+	document.getElementById('images').addEventListener('click',function(e){
+	console.log('clicked inside of ul')
+	},true)
+	document.getElementById('owl').addEventListener('click',function(e){
+	console.log('owl clicked') // when we click owl image then firstly clicked inside of ul will be printed then owl clicked will be printed secondly
+	},true) // this is called Event Bubling execution of program will start from up to bottom
 
 
 	// document.getElementById('images').addEventListener('click',function(e){
@@ -67,18 +67,22 @@
 	// 	console.log('google clicked');
 	// }, false)
 
-	document.getElementById('images').addEventListener('click',function(e){
-		console.log(e.target)
-		//console.log(e.target.parentNode) // used to find the parent of the current node
-		console.log(e.target.tagName);
-		if(e.target.tagName === 'IMG'){
-			console.log(e.target.id);
-			const removeIt = e.target.parentNode
-			removeIt.remove()
-		}
+	// document.getElementById('images').addEventListener('click',function(e){
+	// 	console.log(e.target)
+	//console.log(e.target.parentNode) // used to find the parent of the current node
+	// 	console.log(e.target.tagName);
+	// 	if(e.target.tagName === 'IMG'){
+	// 		console.log(e.target.id);
+	// 		const removeIt = e.target.parentNode
+	// 		removeIt.remove()
+	// 	}
 		
-		// removeIt.parentNode.removeChild(removeIt)
-	})
+	// 	// removeIt.parentNode.removeChild(removeIt)
+	// })
+
+	// setTimeout(function(){
+	// 	console.log("Rahul")
+	// }, 2000)
 
 </script>
 </html>
