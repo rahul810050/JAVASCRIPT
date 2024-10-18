@@ -127,15 +127,15 @@ function setTimeoutPromisified(duration){
 }
 
 
-// setTimeoutPromisified(1000).then(()=>{
-// 	console.log('hi')
-// 	setTimeoutPromisified(3000).then(()=>{
-// 		console.log('hello')
-// 		setTimeoutPromisified(5000).then(()=> {
-// 			console.log('hello there');
-// 		})
-// 	})
-// })
+setTimeoutPromisified(1000).then(()=>{
+	console.log('hi')
+	setTimeoutPromisified(3000).then(()=>{
+		console.log('hello')
+		setTimeoutPromisified(5000).then(()=> {
+			console.log('hello there');
+		})
+	})
+})
 
 
 // setTimeoutPromisified(1000).then(()=>{
@@ -150,15 +150,15 @@ function setTimeoutPromisified(duration){
 // 	console.log('error aa gya bhai', error)
 // })
 
-async function solve(){
-	await setTimeoutPromisified(1000)
-	console.log('hi')
-	await setTimeoutPromisified(3000)
-	console.log('hello')
-	await setTimeoutPromisified(5000)
-	console.log('hello there')
-}
+// async function solve(){
+// 	await setTimeoutPromisified(1000)
+// 	console.log('hi')
+// 	await setTimeoutPromisified(3000)
+// 	console.log('hello')
+// 	await setTimeoutPromisified(5000)
+// 	console.log('hello there')
+// }
 
-solve()
+// solve()
 
 console.log('this gets printed first')
