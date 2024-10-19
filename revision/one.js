@@ -437,3 +437,11 @@ const fs = require('fs')
 
 
 
+const hex = '0123456789ABCDEF'
+			let color = '#'
+
+			for(let i = 0; i < 6; i++){
+				const rand = hex[Math.floor(Math.random() * 16 )]
+				color += rand
+			}
+			console.log(color)

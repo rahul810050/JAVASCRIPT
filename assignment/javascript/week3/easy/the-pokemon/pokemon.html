@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Pokemon</title>
+	<style>
+		body{
+			background-color: rgb(24, 24, 24);
+			color: rgb(239, 232, 232);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+		.heading{
+			font-size: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div style="background-color: chocolate; margin-top: 100px; border-radius: 10px;">
+		<div style="padding: 20px;">
+			<div>
+				<h1 class="heading">Website of Pokemons</h1>
+			</div>
+				<div style="display: flex; flex-direction: column; ">
+					
+						<div style="margin: 10px;">
+							<label for="number">No.</label>
+							<input class="number" type="text" placeholder="enter number of Pokemon">
+						</div>
+						<!-- <div style="margin: 10px;">
+							<label for="name">Name of Pokemon</label>
+							<input class="name" type="text" placeholder="enter name of Pokemon">
+						</div> -->
+						<div>
+							<button onclick="showPokemonCard()">submit</button>
+						</div>
+					
+				</div>
+				<div class="card" >
+					
+			
+				</div>
+		</div>
+	</div>
+
+
+	<script src="pokemon.js">
+		
+	</script>
+</body>
+</html>
