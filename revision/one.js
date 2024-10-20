@@ -437,11 +437,34 @@ const fs = require('fs')
 
 
 
-const hex = '0123456789ABCDEF'
-			let color = '#'
+// const hex = '0123456789ABCDEF'
+// 			let color = '#'
 
-			for(let i = 0; i < 6; i++){
-				const rand = hex[Math.floor(Math.random() * 16 )]
-				color += rand
-			}
-			console.log(color)
+// 			for(let i = 0; i < 6; i++){
+// 				const rand = hex[Math.floor(Math.random() * 16 )]
+// 				color += rand
+// 			}
+// 			console.log(color)
+
+
+
+let todo = [
+	{
+		title: "Rahul's Linkedin",
+		image: "link",
+		content: 'becoming a Millinior'
+	},{},{}]
+
+function render(){
+
+	const component = document.querySelector('.component')
+	todo.map((data)=> {
+
+		component.innerHTML +=
+		`
+			<h1>${data.title}</h1>
+			<p>${data.content}</p>
+			<img src="${data.image}" alt= "">
+		`
+	})
+}

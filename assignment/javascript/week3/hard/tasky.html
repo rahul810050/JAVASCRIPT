@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasky</title>
+</head>
+<body style="background-color: #E3F2FD; padding: 20px;">
+    <div style="display: flex;  justify-content: center;  gap: 17px; padding: 10px; border-radius: 10px;">
+
+        <!-- todo -->
+        <div style="width: 100%; background-color: rgb(142, 142, 142); border-radius: 10px; padding: 10px; color: white; ">
+            <div style="display: flex; justify-content: space-between; align-items: center; ">
+                <h3>To Do</h3>
+            </div>
+
+            <div class="todoUpper" style="display: flex; flex-direction: column; gap: 5px;">
+                <div class="todo" style="background-color: rgb(88, 88, 88); padding: 20px; border-radius: 8px; margin: 8px;">
+                    <div>
+                        <h4>Sample Todo</h4>
+                        <p style="margin-top: -14px;">Sample Description</p>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <button style="width: 90px; height: 27px; font-size: 13px; font-weight: bold; border: none; border-radius: 15px;">Easy</button>
+                        <button style="width: 140px; height: 27px; font-size: 13px; font-weight: bold; border: none; border-radius: 15px;">Date</button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <div class="formTodo" style=" display: none; flex-direction: column; text-align: left; margin: 8px; width: 100%;">
+                    <div style="display: flex; flex-direction: column;">
+                        <label style="font-size: 15px; margin-top: 5px;" for="todo">Todo</label>
+                        <input class="textTodo" id="todo" style="border-radius: 5px; color: black; border: none;" type="text" placeholder="Enter your todo">
+                    </div>
+                    <div style="display: flex; flex-direction: column;">
+                        <label style="font-size: 15px; margin-top: 5px;" for="description">Description</label>
+                        <input class="descTodo" id="description" style="border-radius: 5px; color: black; border: none;" type="text" placeholder="Add a description">
+                    </div>
+                    <div style="display: flex; flex-direction: column;">
+                        <label style="font-size: 15px; margin-top: 5px;" for="type">Type</label>
+                        <select style="border-radius: 5px;" class="typeTodo" id="type">
+                            <option value="Easy">Easy</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Hard">Hard</option>
+                        </select>
+                    </div>
+
+                    <button class="submitTodo" style="margin-top: 10px; width: 100%; background-color: rgb(49 48 48); color: white; height: 35px; border-radius: 8px; font-size: 16px; font-weight: lighter; border: none;" onclick="addTodo()">Submit</button>
+                </div>
+
+                <button class="todoBtn" style="width: 100%; background-color: rgb(49 48 48); color: white; height: 35px; border-radius: 8px; font-size: 16px; font-weight: lighter; border: none; margin-right: 10px; margin-left: 10px;" onclick="takeTodo()">Add new</button>
+            </div>
+        </div>
+
+
+				<!-- in progress -->
+				<div style="width: 100%; background-color: rgb(142, 142, 142); border-radius: 10px; padding: 10px; color: white; ">
+					<div style="display: flex; justify-content: space-between; align-items: center; ">
+							<h3>To Do</h3>
+					</div>
+
+					<div class="InProgressUpper" style="display: flex; flex-direction: column; gap: 5px;">
+							<div class="InProgress" style="background-color: rgb(88, 88, 88); padding: 20px; border-radius: 8px; margin: 8px;">
+									<div>
+											<h4>Sample Todo</h4>
+											<p style="margin-top: -14px;">Sample Description</p>
+									</div>
+									<div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+											<button style="width: 90px; height: 27px; font-size: 13px; font-weight: bold; border: none; border-radius: 15px;">Easy</button>
+											<button style="width: 140px; height: 27px; font-size: 13px; font-weight: bold; border: none; border-radius: 15px;">Date</button>
+									</div>
+							</div>
+					</div>
+
+					<div style="display: flex; justify-content: center; align-items: center;">
+							<div class="formInProgress" style=" display: none; flex-direction: column; text-align: left; margin: 8px; width: 100%;">
+									<div style="display: flex; flex-direction: column;">
+											<label style="font-size: 15px; margin-top: 5px;" for="todo">Todo</label>
+											<input class="textInProgress" id="todo" style="border-radius: 5px; color: black; border: none;" type="text" placeholder="Enter your todo">
+									</div>
+									<div style="display: flex; flex-direction: column;">
+											<label style="font-size: 15px; margin-top: 5px;" for="description">Description</label>
+											<input class="descInProgress" id="description" style="border-radius: 5px; color: black; border: none;" type="text" placeholder="Add a description">
+									</div>
+									<div style="display: flex; flex-direction: column;">
+											<label style="font-size: 15px; margin-top: 5px;" for="type">Type</label>
+											<select style="border-radius: 5px;" class="typeInProgress" id="type">
+													<option value="Easy">Easy</option>
+													<option value="Medium">Medium</option>
+													<option value="Hard">Hard</option>
+											</select>
+									</div>
+
+									<button class="submitInProgress" style="margin-top: 10px; width: 100%; background-color: rgb(49 48 48); color: white; height: 35px; border-radius: 8px; font-size: 16px; font-weight: lighter; border: none;" onclick="addInProgress()">Submit</button>
+							</div>
+
+							<button class="InProgressBtn" style="width: 100%; background-color: rgb(49 48 48); color: white; height: 35px; border-radius: 8px; font-size: 16px; font-weight: lighter; border: none; margin-right: 10px; margin-left: 10px;" onclick="takeInProgress()">Add new</button>
+					</div>
+			</div>
+
+
+
+<!-- under review -->
+<div style="width: 100%; background-color: rgb(142, 142, 142); border-radius: 10px; padding: 10px; color: white; ">
+	<div style="display: flex; justify-content: space-between; align-items: center; ">
+			<h3>To Do</h3>
+	</div>
+
+	<div class="todoUpper" style="display: flex; flex-direction: column; gap: 5px;">
+			<div class="todo" style="background-color: rgb(88, 88, 88); padding: 20px; border-radius: 8px; margin: 8px;">
+					<div>
+							<h4>Sample Todo</h4>
+							<p style="margin-top: -14px;">Sample Description</p>
+					</div>
+					<div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+							<button style="width: 90px; height: 27px; font-size: 13px; font-weight: bold; border: none; border-radius: 15px;">Easy</button>
+							<button style="width: 140px; height: 27px; font-size: 13px; font-weight: bold; border: none; border-radius: 15px;">Date</button>
+					</div>
+			</div>
+	</div>
+
+	<div style="display: flex; justify-content: center; align-items: center;">
+			<div class="formTodo" style=" display: none; flex-direction: column; text-align: left; margin: 8px; width: 100%;">
+					<div style="display: flex; flex-direction: column;">
+							<label style="font-size: 15px; margin-top: 5px;" for="todo">Todo</label>
+							<input class="textTodo" id="todo" style="border-radius: 5px; color: black; border: none;" type="text" placeholder="Enter your todo">
+					</div>
+					<div style="display: flex; flex-direction: column;">
+							<label style="font-size: 15px; margin-top: 5px;" for="description">Description</label>
+							<input class="descTodo" id="description" style="border-radius: 5px; color: black; border: none;" type="text" placeholder="Add a description">
+					</div>
+					<div style="display: flex; flex-direction: column;">
+							<label style="font-size: 15px; margin-top: 5px;" for="type">Type</label>
+							<select style="border-radius: 5px;" class="typeTodo" id="type">
+									<option value="Easy">Easy</option>
+									<option value="Medium">Medium</option>
+									<option value="Hard">Hard</option>
+							</select>
+					</div>
+
+					<button class="submitTodo" style="margin-top: 10px; width: 100%; background-color: rgb(49 48 48); color: white; height: 35px; border-radius: 8px; font-size: 16px; font-weight: lighter; border: none;" onclick="addTodo()">Submit</button>
+			</div>
+
+			<button class="todoBtn" style="width: 100%; background-color: rgb(49 48 48); color: white; height: 35px; border-radius: 8px; font-size: 16px; font-weight: lighter; border: none; margin-right: 10px; margin-left: 10px;" onclick="takeTodo()">Add new</button>
+	</div>
+</div>
+
+	<!-- finished -->
+	<div style="width: 100%; background-color: rgb(142, 142, 142); border-radius: 10px; padding: 10px; color: white; ">
+		<div style="display: flex; justify-content: space-between; align-items: center; ">
+				<h3>To Do</h3>
+		</div>
+
+		<div class="todoUpper" style="display: flex; flex-direction: column; gap: 5px;">
+				<div class="todo" style="background-color: rgb(88, 88, 88); padding: 20px; border-radius: 8px; margin: 8px;">
+						<div>
+								<h4>Sample Todo</h4>
+								<p style="margin-top: -14px;">Sample Description</p>
+						</div>
+						<div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+								<button style="width: 90px; height: 27px; font-size: 13px; font-weight: bold; border: none; border-radius: 15px;">Easy</button>
+								<button style="width: 140px; height: 27px; font-size: 13px; font-weight: bold; border: none; border-radius: 15px;">Date</button>
+						</div>
+				</div>
+		</div>
+
+		<div style="display: flex; justify-content: center; align-items: center;">
+				<div class="formTodo" style=" display: none; flex-direction: column; text-align: left; margin: 8px; width: 100%;">
+						<div style="display: flex; flex-direction: column;">
+								<label style="font-size: 15px; margin-top: 5px;" for="todo">Todo</label>
+								<input class="textTodo" id="todo" style="border-radius: 5px; color: black; border: none;" type="text" placeholder="Enter your todo">
+						</div>
+						<div style="display: flex; flex-direction: column;">
+								<label style="font-size: 15px; margin-top: 5px;" for="description">Description</label>
+								<input class="descTodo" id="description" style="border-radius: 5px; color: black; border: none;" type="text" placeholder="Add a description">
+						</div>
+						<div style="display: flex; flex-direction: column;">
+								<label style="font-size: 15px; margin-top: 5px;" for="type">Type</label>
+								<select style="border-radius: 5px;" class="typeTodo" id="type">
+										<option value="Easy">Easy</option>
+										<option value="Medium">Medium</option>
+										<option value="Hard">Hard</option>
+								</select>
+						</div>
+
+						<button class="submitTodo" style="margin-top: 10px; width: 100%; background-color: rgb(49 48 48); color: white; height: 35px; border-radius: 8px; font-size: 16px; font-weight: lighter; border: none;" onclick="addTodo()">Submit</button>
+				</div>
+
+				<button class="todoBtn" style="width: 100%; background-color: rgb(49 48 48); color: white; height: 35px; border-radius: 8px; font-size: 16px; font-weight: lighter; border: none; margin-right: 10px; margin-left: 10px;" onclick="takeTodo()">Add new</button>
+		</div>
+</div>
+
+
+
+</div>
+
+
+
+		
+
+    <script src="todo.js"></script>
+    <script src="inProgress.js"></script>
+    <script src="preview.js"></script>
+    <script src="finished.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form Builder</title>
+</head>
+<body style="display: flex; padding: 20px; background-color: #d3d3d3;">
+	<div style="display: flex; gap: 10px; width: 100%;">
+
+		<!-- form builder -->
+		<div class="builder" style="background-color: white; width: auto; flex: 1; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); ">
+			<h1>Form Builder</h1>
+			<div>
+				<h3>Select Field Type</h3>
+				<select class="fieldType" style="width: 100%;">
+					<option value="text">Text</option>
+					<option value="checkbox">Checkbox</option>
+					<option value="radio">Radio</option>
+				</select>
+			</div>
+			<div>
+				<h3>Field Label</h3>
+				<input class="label" type="text" placeholder="Enter field label" style="width: 100%;">
+			</div>
+			<button style="width: 100%; color: white; background-color: rgb(8, 52, 163); margin-top: 20px; height: 30px; text-align: center; font: bold; font-size: 16px; border: none; border-radius: 10px;" onclick="addField()">Add Field</button>
+		</div>
+		
+
+		<!-- form preview -->
+		<div class="preview" style=" flex: 1; padding: 20px; background-color: white;  border-radius: 10px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); ">
+			<h1>Form Preview</h1>
+			<div style=" flex: 1;">
+				<form class="form">
+					
+				</form>
+			</div>
+		</div>
+		
+	</div>
+
+
+	<script src="form-builder.js">
+
+	</script>
+</body>
+</html>
