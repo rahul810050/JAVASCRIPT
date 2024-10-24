@@ -1,0 +1,15 @@
+{
+  "name": "revision",
+  "version": "1.0.0",
+  "main": "one.js",
+  "scripts": {
+    "start": "node one.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chalk": "^5.3.0"
+  }
+}

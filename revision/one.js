@@ -26,6 +26,7 @@ const users = [{
 }
 ]
 
+const { time } = require('console');
 // function assignment(users){
 // 	for(let i = 0; i < users.length; i++){
 // 		if(users[i].age > 18){
@@ -448,23 +449,90 @@ const fs = require('fs')
 
 
 
-let todo = [
-	{
-		title: "Rahul's Linkedin",
-		image: "link",
-		content: 'becoming a Millinior'
-	},{},{}]
+// let todo = [
+// 	{
+// 		title: "Rahul's Linkedin",
+// 		image: "link",
+// 		content: 'becoming a Millinior'
+// 	},{},{}]
 
-function render(){
+// function render(){
 
-	const component = document.querySelector('.component')
-	todo.map((data)=> {
+// 	const component = document.querySelector('.component')
+// 	todo.map((data)=> {
 
-		component.innerHTML +=
-		`
-			<h1>${data.title}</h1>
-			<p>${data.content}</p>
-			<img src="${data.image}" alt= "">
-		`
+// 		component.innerHTML +=
+// 		`
+// 			<h1>${data.title}</h1>
+// 			<p>${data.content}</p>
+// 			<img src="${data.image}" alt= "">
+// 		`
+// 	})
+// }
+
+
+
+// console.log(__dirname) // it prints the current directory
+
+
+
+
+
+function returnPromise(ms){
+	return new Promise(function(resolve){
+		setTimeout(()=>{
+			console.log(`${ms} second has passed`)
+			resolve();
+		}, ms);
 	})
 }
+
+// returnPromise(2000).then(function(data){
+// 	console.log(data)
+// }).catch((err)=>{
+// 	console.log(err)
+// })
+
+
+
+// returnPromise(2000)
+// .then(function(e){
+// 	returnPromise(5000)
+// 	.then(function(f){
+// 		returnPromise(3000)
+// 		.then(function(g){
+// 			console.log('this is the last return')
+// 		})
+// 	})
+// })
+
+// console.log('hey there')
+
+
+const func = require('./two.js');
+
+function sleep(time){
+	return new Promise(function(resolve){
+		setTimeout(function(){
+			resolve(time)
+		}, time)
+	})
+}
+
+function sleeper(){
+	return Promise.all([sleep(1000),sleep(4000), sleep(7000)]);
+}
+
+
+Promise.all([func(), sleeper()])
+.then(function(time){
+	const totalTimeOfTwo = time[0].reduce((a,sum)=> a+sum, 0);
+	const totalTimeOfOne = time[1].reduce((a,sum)=> a+sum, 0);
+
+	if(totalTimeOfOne === totalTimeOfTwo){
+		console.log('time of both the promises is same', totalTimeOfOne);
+	} else{
+		console.log('the time of file two is:',totalTimeOfTwo);
+		console.log('the time of file one is:', totalTimeOfTwo);
+	}
+}).catch(err => console.log('error aa gya bhai', err));
