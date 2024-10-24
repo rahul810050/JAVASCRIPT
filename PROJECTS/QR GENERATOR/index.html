@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR GENERATOR</title>
+</head>
+<body style="height: 100vh; margin: 0; display: flex; justify-content: center; align-items: center; background: linear-gradient(135deg, #8e2de2, #4a00e0);">
+    
+    <div class="container" style="width: 450px; background: linear-gradient(135deg, #ffffff, #d4c3fc); color: #333; padding: 25px; box-sizing: border-box; border-radius: 16px; box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);">
+        <h1 style="margin: 0; font-size: x-large; font-weight: 700;" class="heading">QR GENERATOR</h1>
+        
+        <div class="image" style="background-color: #f3f3f3; margin: 20px 0; padding: 15%; border-radius: 12px; overflow: hidden; display: flex; justify-content: center; align-items: center; box-sizing: border-box; height: 300px;">
+            <img style="width: 90%; cursor: pointer;" id="img" >
+        </div>
+        <div class="form" style="margin-top: 10px;">
+            <input class="content" style="width: 100%; border-radius: 10px; padding: 15px; box-sizing: border-box; border: 1px solid #ddd; background-color: #e7e6fc; color: #555; outline: none;" type="text" placeholder="Enter text to create QR code">
+            <button class="btn" style="width: 100%; border-radius: 10px; padding: 15px; box-sizing: border-box; background: linear-gradient(135deg, #ff7e5f, #feb47b); border: none; color: white; outline: none; margin-top: 10px; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease;" onclick="generateQR()">Generate QR</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
